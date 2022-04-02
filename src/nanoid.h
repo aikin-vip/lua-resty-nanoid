@@ -37,8 +37,8 @@ char* safe_simple();
 char* custom(char alphs[], int size) {
     int alph_size = strlen(alphs) - 1;
     char *id = (char *) malloc(sizeof(char) * 3);
-
-    for( int i = 0; i < size; i++ ) {
+    int i;
+    for(i = 0; i < size; i++ ) {
         int random_num;
         do {
             random_num = rand();
@@ -74,16 +74,16 @@ char* safe_custom(char alphs[], int size) {
         return NULL;
 
     fread(buffer, size, 1, rand_src);
-
-    for (int i = 0; i < size; ++i) {
+    int i;
+    for (i = 0; i < size; ++i) {
         sum += buffer[i];
     }
 
     free(buffer);
 
     srand(sum);
-
-    for (int j = 0; j < size; ++j) {
+    int j;
+    for (j = 0; j < size; ++j) {
         unsigned int random_num;
 
         do {
