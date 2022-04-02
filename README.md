@@ -1,4 +1,4 @@
-# lua-resty-nanoid
+# nanoid
 Lua nanoid library for luajit and openresty.
 
 Single header NanoID implementation in C from https://github.com/NerdyPepper/nanoid
