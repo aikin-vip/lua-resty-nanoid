@@ -3,7 +3,7 @@
 #include <lualib.h>  
 #include <sys/time.h>
 
-#include <nanoid.h>
+#include "nanoid.h"
 
 static int l_generate( lua_State *L )
 {
