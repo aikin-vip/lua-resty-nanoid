@@ -5,6 +5,10 @@
 
 #include "nanoid.h"
 
+#if LUA_VERSION_NUM < 502
+#define luaL_newlib(L, l) (lua_newtable(L), luaL_register(L, NULL, l))
+#endif
+
 static int l_generate( lua_State *L )
 {
     lua_Integer n = lua_tointeger(L, 1);
